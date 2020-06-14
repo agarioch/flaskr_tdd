@@ -38,7 +38,10 @@
         <ul class="entries">
             {% for entry in entries %}
                 <li class="entry">
-                    <h2 id="{{ entry.id }}">{{ entry.title }}</h2>
+                    <div class="title">
+                        <h2>{{ entry.title }}</h2>
+                        <span class="delete" id="{{ entry.id }}">X</span>
+                    </div>
                     {{ entry.text|safe }}
                 </li>
             {% else %}
